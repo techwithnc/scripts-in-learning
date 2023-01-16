@@ -15,6 +15,7 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 cd ~
 composer create-project --prefer-dist laravel/laravel travel_list
 
+cd travel_list
 php artisan serve --host 0.0.0.0
 
 # Setting up Nginx Config
@@ -27,7 +28,7 @@ sudo vim /etc/nginx/sites-available/travel_list
 
 server {
     listen 80;
-    server_name 102.techwithnc.com;
+    server_name web102.techwithnc.com;
     root /var/www/travel_list/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
